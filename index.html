@@ -2,9 +2,77 @@
     <head>
         <meta charset="utf-8">
         <title>Get 1000</title>
-    </head>
+        <style>
+            body { 
+                /* Градиент */ 
+                background: linear-gradient(#2900bb, #ff007d) fixed;
+                }
 
+            @font-face {
+                font-family: DGO; 
+                src: url(fonts/DGO.ttf); 
+                }
+
+            h1{
+                font-family: DGO;
+                color: azure;
+                margin-top: 2%;
+                margin-left: 0%;
+                font-size: 24px;
+            }
+
+            .texthalf
+            {
+                float: right;
+                width: 50%;
+            }
+            .buttonfield{margin-top: 5%;}
+            .right_button_container{float:right; width: 50%;}
+            .left_button_container{float: left; width: 50%;}
+            .button{width: 60%; height: 5%;margin-left: 18%;margin-top: 10%;
+                    background-color: rgb(37, 37, 37); border-radius: 25px;
+                    display: flex;
+                    align-items: center; font-family: DGO; font-size: 12px; color: rgb(255, 255, 255);
+                    justify-content: center;
+            }
+            .essahalf{width: 50%;float: left;display: flex;align-items: center;justify-content: center;}
+
+        </style>
+
+        <script>
+            function updateCourse() {
+                var xhr = new XMLHttpRequest();
+                xhr.setRequestHeader()
+                xhr.onreadystatechange = function(){
+                                        console.log(xhr)
+                                        }
+                xhr.open('GET', 'http://www.cbr.ru/scripts/XML_daily.asp', true)
+                xhr.send()
+            }
+        window.onload = updateCourse;
+        </script>
+    </head>
     <body>
-        <p>Hello world!</p>
+        <div class = "essahalf">
+            <img src="img/esse.png">
+        </div>
+        <div class="texthalf">
+            <h1 style="font-size:72px; margin-top: 10%">Во что превратилась тыща?</h1>
+            <h1>21 июля 2021 года я вложил в пиво ESSA 1000 (одну тычячу) рублей</h1>
+            <h1>По сегодняшнему курсу это 20 бутылок пива</h1>
+            <div class = "buttonfield">
+                <div class = "left_button_container">
+                    <div class = "button" onclick="alert('Хуй тебе')">
+                        Получить 20 бутылок пива
+                    </div>
+                </div>
+                <div class = "right_button_container">
+                    <div class="button" onclick="alert('Хуй тебе')">
+                        Получить 1000 рублей
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
